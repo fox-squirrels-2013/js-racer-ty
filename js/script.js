@@ -17,7 +17,7 @@ function countDown() {
 }
 
 function checkForAction(){
-    $(document).keypress(function (e){
+    $(document).on('keypress', function (e){
         if      (e.charCode === 113) {moveRacer(1)} 
             else if (e.charCode === 112) {moveRacer(2)}
         })
