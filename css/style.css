@@ -1,0 +1,50 @@
+header h1 {
+	text-align: center;
+	font-size: 70px;
+	margin-top: 0px;
+	padding: 10px;
+	color: #fff;
+	background-color: green;
+}
+
+#start {
+	text-align: center;
+	margin: auto;
+	color: #fff;
+	background-color: red;
+	font-size: 25px;
+	/*border: 1px solid red;*/
+	width: 200px;
+}
+
+#race_track {
+	width: 100%;
+}
+
+.racer {
+	width: 30px;
+	/*height: 50px;*/
+	padding-right: 10px;
+	margin-top: 20px;
+	text-align: right;
+	color: #fff;
+	font-size: 30px;
+}
+
+#racer1 {
+	background-color: blue;
+}
+
+#racer2 {
+	background-color: purple;
+}
+
+#finish_line {
+	position: absolute;
+	height: 100%;
+	width: 5px;
+	background-color: #111;
+	right: 100px;
+	top: 0px;
+	z-index: -1;
+}
