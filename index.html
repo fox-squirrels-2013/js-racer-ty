@@ -1,27 +1,60 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>JS Racer</title>
+	<title>js racer</title>
 </head>
 
-<link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/normalize.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="js/script.js" type="text/javascript"></script>
-
+<!-- <script src="js/script.js" type="text/javascript"></script> -->
+<script src="js/setup.js" type="text/javascript"></script>
 <script src="js/game.js" type="text/javascript"></script>
 <script src="js/player.js" type="text/javascript"></script>
 
 <body>
 	<header>
-		<h1>JS Racer</h1>
-		<div id="start">START RACE</div>
+		<a href="./index.html"><h1>js racer</h1></a>
 	</header>
 
 
-	<div id="race_track"></div>
+	<div class="container">
 
-	<div id="finish_line"></div>
+		<h1>Create New Game</h1>
+
+		<form id='create-players'> <!-- method="link" actions="race.html" -->
+
+			<div id="playerinputs">
+				<div class="createplayer" id="p0">
+					Player Name: <input type='text' class='name' size='3' maxLength='3'>
+					Race Key: <input type='text' class='key' size='1' maxLength='1'>
+				</div>
+
+				<div class="createplayer" id="p1">
+					Player Name: <input type='text' class='name' size='3' maxLength='3'>
+					Race Key: <input type='text'class='key' size='1' maxLength='1'>
+				</div>
+			</div>
+
+			<div>
+				<a href="#" onclick="addPlayer();">add another player</a>
+				<input type="button" id="submit-players" value="submit">
+
+			</div>
+		</form>
+
+	</div>
 </body>
 </html>
+<!-- 
+
+<form id="sign-in" method="post" action="/sessions">
+	<p>Email</p>
+	<input type="email" name="user[email]" placeholder="e.g., me@example.com" value="<%= @email %>"><br>
+	<p>Password</p>
+	<input type="password" name="user[password]" placeholder="6 or more characters">
+	<br>
+	<div class="submit"><input type="submit" value="Sign In"></div>
+</form> -->

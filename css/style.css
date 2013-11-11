@@ -1,10 +1,30 @@
 header h1 {
-	text-align: center;
-	font-size: 70px;
 	margin-top: 0px;
-	padding: 10px;
+	padding: 5px 0 5px 5px;
+	background-color: #111;
 	color: #fff;
-	background-color: green;
+	font-weight: normal;
+}
+
+header a {
+	text-decoration: none;
+}
+
+.container {
+	text-align: center;
+}
+
+form {
+	margin-top: 20px;
+}
+
+input {
+	margin-top: 20px;
+}
+
+#submit-players {
+	margin-left: 70px;
+	margin-right: 0px;
 }
 
 #start {
@@ -13,16 +33,16 @@ header h1 {
 	color: #fff;
 	background-color: red;
 	font-size: 25px;
-	/*border: 1px solid red;*/
 	width: 200px;
 }
 
 #race_track {
 	width: 100%;
+	padding-top: 30px;
 }
 
 .player {
-	width: 100px;
+	width: 120px;
 	padding-right: 10px;
 	margin: 10px 0px 10px;
 	text-align: right;
@@ -30,13 +50,6 @@ header h1 {
 	font-size: 30px;
 }
 
-#player0 {
-	background-color: blue;
-}
-
-#player1 {
-	background-color: purple;
-}
 
 #finish_line {
 	position: absolute;
@@ -46,4 +59,8 @@ header h1 {
 	right: 100px;
 	top: 0px;
 	z-index: -1;
+}
+
+.pkey {
+	font-size: 12px;
 }

@@ -1,11 +1,15 @@
-function Game(p1, p2) {
-	this.allPlayers = [p1, p2]
-	$(this.allPlayers).each(function(i, player){ player.init() })
+function Game(players) {
+	$(players).each(function(i, player){ player.init() })
+  this.allPlayers = players
 }
 
 Game.prototype.onKeyUp = function(eventCode){
-	if      (eventCode === 81) {this.allPlayers[0].updateLocation()} 
-	else if (eventCode === 80) {this.allPlayers[1].updateLocation()}
+  var self = this
+  $(this.allPlayers).each(function(i, e){
+    if (eventCode === e.key.charCodeAt(0)) {
+      self.allPlayers[i].updateLocation()
+    } 
+  })
 }
 
 Game.prototype.render = function() {
@@ -21,6 +25,6 @@ Game.prototype.render = function() {
   // })
 
   for(var i = 0; i < this.allPlayers.length; i++) {
-  	$('#player' + i).width(this.allPlayers[i].location)
+    $('#player' + i).width(this.allPlayers[i].location)
   }
 }
