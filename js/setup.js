@@ -26,7 +26,7 @@ $(document).ready(function() {
 		//   alert( "Load was performed." );
 		// });
 
-	})
+})
 })
 
 
@@ -77,12 +77,16 @@ function checkForWinner(racer) {
 	$('.player').each(function(i, elem) {
 		if($(elem).width() >= screen.width - 200 ) {
 			alert($(elem).text().slice(5, $(elem).text().length) + ' won the race!')
-        // resetGame()
-    	}
+			resetGameOption()
+		}
 	})
 }
 
-// function resetGame() {
-//     // use ajax for reload ~~
-//     location.reload()
-// }
+function resetGameOption() {
+	$('#start').text('new game?')
+	$(this).on('click', function(){
+	    location.reload()
+	}) 
+    // would like to use ajax for reload
+    // and present option for reset OR newgame (current is like newgame only)
+}
