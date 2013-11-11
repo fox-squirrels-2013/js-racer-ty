@@ -42,12 +42,12 @@ input {
 }
 
 .player {
-	width: 120px;
-	padding-right: 10px;
+	width: 100px;
+	padding: 2px 10px 2px 3px;
 	margin: 10px 0px 10px;
 	text-align: right;
 	color: #fff;
-	font-size: 30px;
+	font-size: 27px;
 }
 
 
