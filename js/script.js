@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  var player1 = new Player('Ty', 1);
-  var player2 = new Player('Dude', 2);
+  var player1 = new Player('Ty', 0);
+  var player2 = new Player('Dude', 1);
 
   var game = new Game(player1, player2);
 
@@ -21,11 +21,10 @@ function checkForActions(game) {
   });
 }
 
-
 function checkForWinner(racer) {
     $('.player').each(function(i, elem) {
       if($(elem).width() >= screen.width - 200 ) {
-        alert('Racer ' + $(elem).text() + ' has won!')
+        alert($(elem).text() + ' won the race!')
         resetGame()
       }
     })

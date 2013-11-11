@@ -11,5 +11,4 @@ Player.prototype.init = function(){
 
 Player.prototype.updateLocation = function(){
     this.location += 100
-    // console.log(this)
 }
