@@ -21,21 +21,20 @@ header h1 {
 	width: 100%;
 }
 
-.racer {
-	width: 30px;
-	/*height: 50px;*/
+.player {
+	width: 100px;
 	padding-right: 10px;
-	margin-top: 20px;
+	margin: 10px 0px 10px;
 	text-align: right;
 	color: #fff;
 	font-size: 30px;
 }
 
-#racer1 {
+#player1 {
 	background-color: blue;
 }
 
-#racer2 {
+#player2 {
 	background-color: purple;
 }
 

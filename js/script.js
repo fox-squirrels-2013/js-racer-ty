@@ -1,36 +1,37 @@
-$(document).on('ready', function(){
-  runGame()
-})
+$(document).ready(function() {
+  var player1 = new Player('Ty', 1);
+  var player2 = new Player('Dude', 2);
 
-function runGame() {
-    $('#start').on('click', function(){
-      countDown()
-      checkForAction()
-  })
-}
+  var game = new Game(player1, player2);
 
-function countDown() {
-    $('#start').text('READY...')
-    setTimeout( function(){
-        $('#start').text('GO!')
+  $('#start').on('click', function() {
+    $(this).text('READY...')
+      setTimeout( function(){ 
+        $('#start').text('GO!') 
+        checkForActions(game)
     }, 1000)
+  })
+});
+
+function checkForActions(game) {
+  $(document).on('keyup', function(event) {
+    game.onKeyUp(event.which);
+    game.render()
+    checkForWinner()
+  });
 }
 
-function checkForAction(){
-    $(document).on('keypress', function (e){
-        if      (e.charCode === 113) {moveRacer(1)} 
-            else if (e.charCode === 112) {moveRacer(2)}
-        })
-}
-
-
-function moveRacer(racer) {
-    $('#racer' + racer).css('width', '+=200')
-    checkForWinner(racer)
-}
 
 function checkForWinner(racer) {
-    if ($('#racer' + racer).width() >= screen.width - 200 ) {
-        alert('Racer ' + racer + 'has won!')
-    }
+    $('.player').each(function(i, elem) {
+      if($(elem).width() >= screen.width - 200 ) {
+        alert('Racer ' + $(elem).text() + ' has won!')
+        resetGame()
+      }
+    })
+}
+
+function resetGame() {
+    // use ajax for reload ~~
+    location.reload()
 }
