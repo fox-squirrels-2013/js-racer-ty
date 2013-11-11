@@ -5,8 +5,8 @@ $(document).ready(function() {
 		$('.container').html(createRace())		
 		makePlayers(playerNames, playerKeys)
 
-		// **** can you use ajax with plain js and html? any way to simulate or acces routes?
-		// **** more research --  locks like local host doesn't work with AJAX?
+		// **** can you use ajax with plain js and html? any way to simulate or access routes?
+		// **** more research --  looks like local host doesn't work with AJAX?
 		// $.ajax({
 		// 	url: doGet(), //./race.html
 		// 	type: 'GET', // GET
